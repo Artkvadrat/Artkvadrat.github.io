@@ -74,7 +74,7 @@
     line-height: 100%;
     padding: 0 3px;
     border-radius: 11px;
-    background: url("../images/headerBg.jpg") rgb(54, 62, 72);
+    background: url("../images/icons/headerBg.jpg") rgb(54, 62, 72);
     background-size: cover;
     width: 75px;
     height: 46px;    
@@ -209,7 +209,7 @@
     position: relative;
     width: 196px;
     height: 52px;
-    background: url("../images/headerBg.jpg") rgb(54, 62, 72);
+    background: url("../images/icons/headerBg.jpg") rgb(54, 62, 72);
     background-size: cover;
     border-radius: 8px;
     padding: 10px 57px;
@@ -281,6 +281,7 @@
 .mainMenuBackground,
 .navigation {
     background-color: black;
+    font-family: "Roboto-Regular", sans-serif;
 }
 
 .navigation > ul {
@@ -364,6 +365,7 @@
 
 .catalogMenu {
     margin-top: 22px;
+    font-family: "Roboto-Regular", sans-serif;
 }
 
 .catalogMenu > ul {
@@ -461,6 +463,7 @@
 
 .newsColumnItemInfo {
     font-size: 14px;
+    font-family: "Roboto-Regular", sans-serif;
 }
 
 .newsColumnItemInfo a {
@@ -551,13 +554,13 @@
 }
 
 .advertisingColumn .slide .dot.active {
-    background-color:  rgb(255, 88, 22);;
+    background-color:  rgb(255, 88, 22);
 }
 
 .newProductBlock,
 .recommendProductBlock,
 .discountProductBlock,
-.stockBlock{
+.stockBlock {
     margin-top: 20px;
     font-family: "Roboto-Regular", sans-serif;
 }
@@ -568,12 +571,34 @@
     margin-top: 50px;
 }
 
+.keyBrandBlock,
+.advantageBlock,
+.reasonBlock,
+.numberBlock,
+.workBlock,
+.descriptionBlock {
+    font-family: "Roboto-Regular", sans-serif;
+    margin-top: 20px;
+}
+
+.advantageBlock {
+    height: 275px;
+    background-color: rgb(227, 229, 235);
+    border-radius: 10px;
+    padding: 30px 20px;
+}
+
 .newProductHeader,
 .recommendProductHeader,
 .discountProductHeader,
 .popularProductHeader,
 .keyBrandHeader,
-.stockHeader {
+.stockHeader,
+.advantageHeader,
+.reasonHeader,
+.numberHeader,
+.workHeader,
+.descriptionHeader {
     display: flex;
     flex-wrap: wrap;
 }
@@ -615,12 +640,22 @@
 }
 
 .popularProductHeader h2,
-.keyBrandHeader h2 {
+.keyBrandHeader h2,
+.advantageHeader h2,
+.reasonHeader h2,
+.reasonItemHeader,
+.numberHeader h2,
+.workHeader h2 {
     text-transform: uppercase;
 }
 
 .popularProductHeader hr,
-.keyBrandHeader hr {
+.keyBrandHeader hr,
+.advantageHeader hr,
+.reasonHeader hr,
+.numberHeader hr,
+.workHeader hr,
+.descriptionHeader hr {
     flex-grow: 1;
     height: 1px;
     margin-top: 16px;
@@ -629,6 +664,14 @@
 
 .keyBrandHeader hr {
     margin-right: 15px;
+}
+
+.advantageHeader hr {
+    border: 1px solid #fff;
+}
+
+.descriptionHeader hr {
+    margin-left: 0;
 }
 
 .keyBrandHeader a {
@@ -643,7 +686,10 @@
 }
 
 .popularProductItemsBlock,
-.keyBrandItemsBlock {
+.keyBrandItemsBlock,
+.advantageItemsBlock,
+.reasonItemsBlock,
+.numberItemsBlock {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
@@ -718,6 +764,160 @@
     justify-content: space-between;
     max-width: 130px;
     min-width: 80px;
+}
+
+.advantageItem {
+    min-width: 100px;
+    max-width: 230px;
+}
+
+.numberItem {
+    width: 180px;
+}
+
+.reasonItem {
+    min-width: 450px;
+    width: 47%;
+    min-height: 360px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.reasonItem.competitorReason {
+    border: 1px solid rgb(203,11,19);
+}
+
+.reasonItem.ourReason {
+    border: 1px solid rgb(22,163,51);
+}
+
+.reasonItemHeader {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 20%;
+    font-size: 14px;
+    color: #fff;
+    padding: 0 80px;
+}
+
+.reasonItem.competitorReason .reasonItemHeader {
+    background-color: rgb(203,11,19);
+}
+
+.reasonItem.ourReason .reasonItemHeader {
+    background-color: rgb(22,163,51);
+}
+
+.reasonItem.competitorReason .reasonItemHeader p::before {
+    content: "";
+    height: 23px;
+    width: 23px;
+    position: absolute;
+    left: 40px;
+    top: 35%;
+    background-image: url("../images/icons/crossIcon.png");
+}
+
+.reasonItem.ourReason .reasonItemHeader p::before {
+    content: "";
+    height: 20px;
+    width: 29px;
+    position: absolute;
+    left: 40px;
+    top: 35%;
+    background-image: url("../images/icons/checkIcon.png");
+}
+
+.reasonItemContent {
+    padding: 20px 30px 20px 50px;
+}
+
+.reasonItemContent ul {
+    font-size: 14px;
+}
+
+.reasonItem.competitorReason .reasonItemContent ul {
+    color: rgb(203,11,19);
+}
+
+.reasonItem.ourReason .reasonItemContent ul {
+    color: rgb(22,163,51);
+}
+
+.reasonItemContent li {
+    margin-bottom: 10px;
+}
+
+.reasonItemContent li span {
+    color: #000;
+}
+
+.advantageItemImg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.numberItemImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 130px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    margin: 0 auto;
+    font-weight: bold;
+    line-height: 0.8;
+}
+
+.numberItem:nth-child(odd) {
+    color: rgb(255, 88, 22);
+}
+
+.numberItem:nth-child(even) {
+    color: rgb(57, 74, 92);
+}
+
+.numberItemImg.big {
+    font-size: 80px;
+}
+
+.numberItemImg.medium {
+    font-size: 54px;
+}
+
+.numberItemImg.small {
+    font-size: 40px;
+}
+
+.advantageItemImg.consultation {
+    background: url("../images/icons/advantageConsultation.png") #fff 50% 60% no-repeat;
+}
+
+.advantageItemImg.payment {
+    background: url("../images/icons/advantagePayment.png") #fff 50% 50% no-repeat;
+}
+
+.advantageItemImg.service {
+    background: url("../images/icons/advantageService.png") #fff 50% 50% no-repeat;
+}
+
+.advantageItemImg.pickpoint {
+    background: url("../images/icons/advantagePickPoint.png") #fff 50% 45% no-repeat;
+}
+
+.advantageDescription,
+.numberDescription {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 20px;
+    color: #000;
 }
 
 .popularProductItemLink {
@@ -913,3 +1113,233 @@
     font-size: 12px;
 }
 
+footer {
+    font-family: "Roboto-Regular", sans-serif;
+}
+
+footer p,
+.upperFooterSecondColumn a,
+.upperFooterThirdColumn a{
+    color: #b2c1cb;
+}
+
+.upperFooter {
+    background-color: #5c7489;
+}
+
+.upperFooterBlock {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 45px;
+}
+
+.upperFooterFirstColumn p:nth-child(2) {
+    margin-top: 30px;
+}
+
+.upperFooterFirstColumn p:nth-child(4) {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.upperFooterSecondColumn {
+    line-height: 20px;
+}
+
+.upperFooterThirdColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.upperFooterThirdColumn a:not(:first-child) {
+    margin-top: 10px;
+}
+
+.upperFooterFourthColumn,
+.upperFooterFourthColumnViberLinks{
+    display: flex;
+}
+
+.upperFooterFourthColumn,
+.upperFooterFourthColumn p {
+    color: white;
+}
+
+.upperFooterFourthColumn h3 {
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.upperFooterFourthColumn > a{
+    text-align: center;
+    display: block;
+    background-image: url("../images/icons/callbackFooter.png");
+    padding-top: 10px;
+    padding-right: 15px;
+    width: 112px;
+    height: 57px;
+    color: #84a2c7;
+    text-decoration: underline dotted;
+}
+
+.upperFooterFourthColumnViberLinks img {
+    margin-right: 3px;
+}
+
+.upperFooterFourthColumnViberLinks p {
+    margin-left: 8px;
+}
+
+#emailAddress {
+    color: white;
+}
+
+.socialLinks {
+    margin-top: 43px;
+}
+
+.socialLinks a {
+    text-decoration: none;
+}
+
+.lowerFooter {
+    background-color: #2c3f53;
+}
+
+.lowerFooterContent {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    justify-content: space-between;
+}
+
+.lowerFooterContent p {
+    font-size: 11px;
+}
+
+.lowerFooterContent img {
+    width: 88px;
+    height: 31px;
+}
+
+.workTabs {
+    display: flex;
+    margin-top: 30px;
+}
+
+.workTab {
+    background-color: rgb(219, 222, 230);
+    border-radius: 7px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding: 15px 25px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.workTab:hover {
+    background-color: rgb(192, 191, 191);
+}
+
+.workTab.active {
+    background-color: #fff;
+}
+
+.workTab span {
+    color: rgb(255, 88, 22);
+    border-bottom: 1px dotted rgb(255, 88, 22);
+}
+
+.workTab.active span {
+    color: #000;
+    border: none;
+}
+
+.workContent {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.workItem {
+    position: relative;
+    max-width: 250px;
+}
+
+.workItem.workPhone,
+.workItem.workApprove {
+    padding-left: 37px;
+}
+
+.workItem.workShipping {
+    padding-left: 53px;
+}
+
+.workItem.workPayment {
+    padding-left: 40px;
+}
+
+.workItem.workArrow {
+    min-width: 45px;
+    background: url("../images/icons/workArrowIcon.png") 0 10% no-repeat;
+}
+
+.workItem.workPhone::before {
+    content: "";
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("../images/icons/workPhoneIcon.png");
+}
+
+.workItem.workApprove::before {
+    content: "";
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("../images/icons/workApproveIcon.png");
+}
+
+.workItem.workShipping::before {
+    content: "";
+    height: 34px;
+    width: 48px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("../images/icons/workShippingIcon.png");
+}
+
+.workItem.workPayment::before {
+    content: "";
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("../images/icons/workPaymentIcon.png");
+}
+
+.descriptionContent {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+.descriptionContent > div {
+    max-width: 48%;
+}
+
+.descriptionContent p {
+    margin-bottom: 20px;
+}
+
+.descriptionContent a {
+    color: rgb(255, 88, 22);
+}
